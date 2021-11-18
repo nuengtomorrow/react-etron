@@ -10,7 +10,7 @@ export default function App() {
         lineHeight: "30px",
       }}
     >
-      <h3>Welcome To React-Minimal</h3>
+      <h3>Welcome To React-Etron</h3>
       <p>React integration electron for minimal project.</p>
     </div>
   );
