@@ -1,0 +1,15 @@
+appId: "react.etron"
+productName: "react-etron"
+mac:
+  icon: "build/logo.png"
+  target: 
+    - "dmg"
+    
+linux: 
+  icon: "build/logo.png"
+  target: 
+    - "deb"
+
+win: 
+  icon: "build/logo.png"
+  target: "nsis"

@@ -1,0 +1,44 @@
+{
+  "name": "react-etron",
+  "version": "1.0.0",
+  "description": "React integration electron for minimal project.",
+  "author": "your name <name@email.com>",
+  "private": true,
+  "homepage": "./",
+  "main": "./public/electron.js",
+  "scripts": {
+    "react:start": "react-scripts start",
+    "react:build": "react-scripts build",
+    "electron:build": "electron-builder",
+    "start": "concurrently \"cross-env BROWSER=none npm run react:start\" \"wait-on http://localhost:3000 && electron .\"",
+    "build:all": "npm run react:build && npm run electron:build -c ./electron-builder.yml -wml",
+    "build:win": "npm run react:build && npm run electron:build -c ./electron-builder.yml --windows",
+    "build:mac": "npm run react:build && npm run electron:build -c ./electron-builder.yml --mac",
+    "build:linux": "npm run react:build && npm run electron:build -c ./electron-builder.yml --linux"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "electron": "^16.0.0",
+    "electron-builder": "^22.1.0",
+    "wait-on": "^6.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
